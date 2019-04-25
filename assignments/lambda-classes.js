@@ -25,6 +25,17 @@ class Instructor extends Person {
     grade(student, subject){
         return `${student.name} receives a perfect score on ${subject}.`
     }
+    adjustGrade(student){
+        function getRandomNum (min,max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max-min))+min;
+        };
+        let rN = getRandomNum(1,10);
+        let adjustedGrade = student.grade + rN;
+        
+        return adjustedGrade;
+    }
 }
 
 class Student extends Person {
@@ -163,6 +174,8 @@ console.log(cale.listsSubjects(cale.favSubjects));
 console.log(cale.PRAssignment(cale, 'Preprocessing II'));
 console.log(cale.sprintChallenge(cale, 'Javascript III'));
 console.log(cale.graduate(cale));
+console.log(ronaldCho.adjustGrade(cale));
+
 
 console.log("========Student 2=======")
 console.log(ira);
@@ -171,6 +184,8 @@ console.log(ira.listsSubjects(ira.favSubjects));
 console.log(ira.PRAssignment(ira, 'Preprocessing II'));
 console.log(ira.sprintChallenge(ira, 'Javascript III'));
 console.log(ira.graduate(ira));
+console.log(vivaCode.adjustGrade(ira));
+
 
 console.log("========Student 3=======")
 console.log(matt);
@@ -179,6 +194,8 @@ console.log(matt.listsSubjects(matt.favSubjects));
 console.log(matt.PRAssignment(matt, 'Preprocessing II'));
 console.log(matt.sprintChallenge(matt, 'Javascript III'));
 console.log(matt.graduate(matt));
+console.log(ronaldCho.adjustGrade(matt));
+
 
 
 console.log("======ProjectManager 1=====")
