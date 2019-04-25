@@ -154,5 +154,5 @@ console.log(ronaldCho.debugsCode(cale, 'Intro To Git'));
 console.log("======ProjectManager 2=====")
 console.log(vivaCode);
 console.log(vivaCode.speak());
-console.log(vivaCode.standUp('Web PT6 - Ronald Cho'));
+console.log(vivaCode.standUp('Web PT6 - Emily McClanahan'));
 console.log(vivaCode.debugsCode(cale, 'Intro To Git'));
