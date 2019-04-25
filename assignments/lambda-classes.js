@@ -45,7 +45,7 @@ class Student extends Person {
     }
 }
 
-class ProjectManagers extends Instructor {
+class ProjectManager extends Instructor {
     constructor(props){
         super(props);
         this.gradClassName=props.gradClassName;
@@ -58,3 +58,53 @@ class ProjectManagers extends Instructor {
         return `${this.name} debugs ${student.name}'s code on ${subject}`
     }
 }
+
+const fred = new Instructor({
+    name: 'Fred',
+    location: 'Bedrock',
+    age: 37,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Don't forget the homies`
+});
+
+const cale = new Student({
+    name: 'Cale',
+    location: 'Scottsdale, AZ',
+    age: 22,
+    gender: 'male',
+    previousBackground: 'Some University, Safeway Manager, Tech Enthusiast',
+    className:'Web PT6',
+    favSubjects: ['HTML', 'LESS', 'Javascript']
+});
+
+const ronaldCho = new ProjectManager({
+    name: 'Ronald Cho',
+    location: 'The Beach',
+    age: 55,
+    gender: 'male',
+    gradClassName: 'Web PT X',
+    favInstructor: 'Josh Knell'
+});
+
+console.log("=======Instructor======")
+console.log(fred);
+console.log(fred.demo('Preprocessing I'));
+console.log(fred.speak());
+console.log(fred.grade(cale, 'Javascript IV'));
+
+
+console.log("========Student=======")
+console.log(cale);
+console.log(cale.speak());
+// console.log(cale.listsSubjects(favSubjects));
+console.log(cale.PRAssignment(cale, 'Preprocessing II'));
+console.log(cale.sprintChallenge(cale, 'Javascript III'));
+
+
+console.log("======ProjectManager=====")
+console.log(ronaldCho);
+console.log(ronaldCho.speak());
+console.log(ronaldCho.standUp('Web PT6 - Ronald Cho'));
+console.log(ronaldCho.debugsCode(cale, 'Intro To Git'));
