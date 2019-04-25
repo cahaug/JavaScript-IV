@@ -69,6 +69,16 @@ const fred = new Instructor({
     catchPhrase: `Don't forget the homies`
 });
 
+const keiran = new Instructor({
+    name: 'Keiran',
+    location: 'Online',
+    age: 25,
+    gender: 'male',
+    favLanguage: 'JavaScript, HTML',
+    specialty: 'Back-end',
+    catchPhrase: `Can anyone tell me...?`
+});
+
 const cale = new Student({
     name: 'Cale',
     location: 'Scottsdale, AZ',
@@ -77,6 +87,16 @@ const cale = new Student({
     previousBackground: 'Some University, Safeway Manager, Tech Enthusiast',
     className:'Web PT6',
     favSubjects: ['HTML', 'LESS', 'Javascript']
+});
+
+const ira = new Student({
+    name: 'Ira',
+    location: 'Phoenix, AZ',
+    age: 27,
+    gender: 'male',
+    previousBackground: 'Lots of cool jobs in diverse areas',
+    className:'Web PT3 Flex',
+    favSubjects: ['React', 'CSS', 'Javascript']
 });
 
 const ronaldCho = new ProjectManager({
@@ -88,23 +108,51 @@ const ronaldCho = new ProjectManager({
     favInstructor: 'Josh Knell'
 });
 
-console.log("=======Instructor======")
+const vivaCode = new ProjectManager({
+    name: 'Emily McClanahan',
+    location: 'The north',
+    age: 29,
+    gender: 'female',
+    gradClassName: 'Web Fulltime 6',
+    favInstructor: 'Keiran'
+});
+
+console.log("=======Instructor 1======")
 console.log(fred);
 console.log(fred.demo('Preprocessing I'));
 console.log(fred.speak());
 console.log(fred.grade(cale, 'Javascript IV'));
 
+console.log("=======Instructor 2======")
+console.log(keiran);
+console.log(keiran.demo('Preprocessing I'));
+console.log(keiran.speak());
+console.log(keiran.grade(cale, 'Javascript IV'));
 
-console.log("========Student=======")
+
+console.log("========Student 1=======")
 console.log(cale);
 console.log(cale.speak());
 console.log(cale.listsSubjects(cale.favSubjects));
 console.log(cale.PRAssignment(cale, 'Preprocessing II'));
 console.log(cale.sprintChallenge(cale, 'Javascript III'));
 
+console.log("========Student 2=======")
+console.log(ira);
+console.log(ira.speak());
+console.log(ira.listsSubjects(ira.favSubjects));
+console.log(ira.PRAssignment(ira, 'Preprocessing II'));
+console.log(ira.sprintChallenge(ira, 'Javascript III'));
 
-console.log("======ProjectManager=====")
+
+console.log("======ProjectManager 1=====")
 console.log(ronaldCho);
 console.log(ronaldCho.speak());
 console.log(ronaldCho.standUp('Web PT6 - Ronald Cho'));
 console.log(ronaldCho.debugsCode(cale, 'Intro To Git'));
+
+console.log("======ProjectManager 2=====")
+console.log(vivaCode);
+console.log(vivaCode.speak());
+console.log(vivaCode.standUp('Web PT6 - Ronald Cho'));
+console.log(vivaCode.debugsCode(cale, 'Intro To Git'));
