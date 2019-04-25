@@ -33,6 +33,7 @@ class Student extends Person {
         this.previousBackground=props.previousBackground;
         this.className=props.className;
         this.favSubjects=props.favSubjects;
+        this.grade=props.grade;
     }
     listsSubjects(favSubjects){
         for(let i=0;i<favSubjects.length;i++){console.log(favSubjects[i]) }
@@ -42,6 +43,18 @@ class Student extends Person {
     }
     sprintChallenge(student, subject){
         return `${student.name} has begun sprint challenge on ${subject}`
+    }
+    graduate(student){
+        if (student.grade > 70 && student.grade <= 100 && student.grade >= 0){
+            return `${student.name} is ready to Graduate!`
+        }
+        if (student.grade < 70 && student.grade <= 100 && student.grade >= 0){
+            return `${student.name}, go back to those assignments to increase your score!`
+        }
+        else {
+            return `Please enter a valid grade.`
+        }
+        
     }
 }
 
@@ -86,7 +99,8 @@ const cale = new Student({
     gender: 'male',
     previousBackground: 'Some University, Safeway Manager, Tech Enthusiast',
     className:'Web PT6',
-    favSubjects: ['HTML', 'LESS', 'Javascript']
+    favSubjects: ['HTML', 'LESS', 'Javascript'],
+    grade: 100
 });
 
 const ira = new Student({
@@ -96,7 +110,19 @@ const ira = new Student({
     gender: 'male',
     previousBackground: 'Lots of cool jobs in diverse areas',
     className:'Web PT3 Flex',
-    favSubjects: ['React', 'CSS', 'Javascript']
+    favSubjects: ['React', 'CSS', 'Javascript'],
+    grade: 68
+});
+
+const matt = new Student({
+    name: 'Matt Hagner',
+    location: 'Unknown',
+    age: 30,
+    gender: 'male',
+    previousBackground: 'Knowledge of Javascript and HTML and CSS',
+    className:'Web PT6',
+    favSubjects: ['React', 'CSS', 'Javascript'],
+    grade: 105
 });
 
 const ronaldCho = new ProjectManager({
@@ -136,6 +162,7 @@ console.log(cale.speak());
 console.log(cale.listsSubjects(cale.favSubjects));
 console.log(cale.PRAssignment(cale, 'Preprocessing II'));
 console.log(cale.sprintChallenge(cale, 'Javascript III'));
+console.log(cale.graduate(cale));
 
 console.log("========Student 2=======")
 console.log(ira);
@@ -143,6 +170,15 @@ console.log(ira.speak());
 console.log(ira.listsSubjects(ira.favSubjects));
 console.log(ira.PRAssignment(ira, 'Preprocessing II'));
 console.log(ira.sprintChallenge(ira, 'Javascript III'));
+console.log(ira.graduate(ira));
+
+console.log("========Student 3=======")
+console.log(matt);
+console.log(matt.speak());
+console.log(matt.listsSubjects(matt.favSubjects));
+console.log(matt.PRAssignment(matt, 'Preprocessing II'));
+console.log(matt.sprintChallenge(matt, 'Javascript III'));
+console.log(matt.graduate(matt));
 
 
 console.log("======ProjectManager 1=====")
