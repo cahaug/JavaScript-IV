@@ -35,7 +35,7 @@ class Student extends Person {
         this.favSubjects=props.favSubjects;
     }
     listsSubjects(favSubjects){
-        for(let i=0;i<favSubjects.length;i++){console.log(favSubjects[i])}
+        for(let i=0;i<favSubjects.length;i++){console.log(favSubjects[i]) }
     }
     PRAssignment(student, subject){
         return `${student.name} has submitted a PR for ${subject}`
@@ -98,7 +98,7 @@ console.log(fred.grade(cale, 'Javascript IV'));
 console.log("========Student=======")
 console.log(cale);
 console.log(cale.speak());
-// console.log(cale.listsSubjects(favSubjects));
+console.log(cale.listsSubjects(cale.favSubjects));
 console.log(cale.PRAssignment(cale, 'Preprocessing II'));
 console.log(cale.sprintChallenge(cale, 'Javascript III'));
 
